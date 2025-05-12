@@ -1,0 +1,128 @@
+/* Fonte limpa e moderna */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #800080, #4b0082);
+    color: #fff;
+}
+
+/* Header */
+.header {
+    background-color: #1a1a1a;
+    padding: 15px;
+    text-align: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover,
+.menu .ativo {
+    color: #10b981;
+}
+
+/* Container principal */
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* Título */
+.container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Formulário */
+.form-doc {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea,
+select,
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+input,
+textarea,
+select {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button {
+    background-color: #10b981;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #059669;
+}
+
+/* Mensagem de envio */
+.mensagem {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.logo-rodape {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.rodape p {
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+    }
+
+    input,
+    textarea,
+    select,
+    button {
+        font-size: 0.95rem;
+    }
+
+    .menu a {
+        display: block;
+        margin: 10px 0;
+    }
+}

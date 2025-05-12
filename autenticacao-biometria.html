@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Autenticação por Biometria</title>
+    <link rel="stylesheet" href="../css/biometria.css" />
+
+</head>
+<body>
+<div class="biometria-container">
+    <div class="robo-animado">
+        <div class="bracos braco-esquerdo"></div>
+        <div class="bracos braco-direito"></div>
+    </div>
+    <h2>Autenticação por Biometria</h2>
+    <p>Aproxime seu dedo do leitor biométrico do dispositivo para continuar.</p>
+    <div class="scanner">
+        Esperando leitura biométrica...
+    </div>
+    <button onclick="simularLeitura()">Simular Leitura</button>
+</div>
+
+<script>
+    function simularLeitura() {
+        alert("Leitura biométrica bem-sucedida! Acesso permitido.");
+
+    }
+</script>
+</body>
+</html>

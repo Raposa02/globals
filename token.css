@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom , #800080,#dda0dd);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    max-width: 350px;
+    width: 100%;
+}
+
+.titulo {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.circle-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 2rem auto;
+}
+
+.ticks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+}
+
+.ticks div {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background: #ccc;
+    top: 0;
+    left: 50%;
+    transform-origin: center 100px;
+    transition: background 0.3s;
+}
+
+.ticks div.active {
+    background: #f44336;
+}
+.codigo,.contador{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    color: #333;
+}
+.codigo{
+    top: 70px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+}
+.contador{
+    top: 110px;
+    font-size: 14px;
+    color:#555;
+}
+
+.info {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #777;
+}
+

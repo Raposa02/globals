@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Javis - Assistente Virtual</title>
+    <link rel="stylesheet" href="../css/chatbot-style.css" />
+</head>
+<body>
+<header class="header">
+    <div id="menu"></div>
+</header>
+
+<main class="chatbot-container">
+    <div class="chat-header">
+        <h2>Olá, eu sou o <span>Javis</span> - Sua IA assistente</h2>
+        <p>Como posso te ajudar hoje?</p>
+    </div>
+
+    <div class="chat-window" id="chatWindow">
+
+    </div>
+
+    <div class="chat-input">
+        <textarea id="mensagem" placeholder="Digite sua mensagem..."></textarea>
+        <button onclick="enviarParaJavis()">Enviar</button>
+    </div>
+</main>
+
+<iframe src="rodape.html" width ="100%" height ="100%px"></iframe>
+
+<script>fetch('navbar.html')
+    .then(response => response.text())
+    .then(data=>{
+        document.getElementById('menu').innerHTML=data;
+    })</script>
+<script src="../javascript/mundo.js"></script>
+<script src="../javascript/navbar.js"></script>
+<script src="../javascript/chatbot.js"></script>
+</body>
+</html>

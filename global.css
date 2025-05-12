@@ -1,0 +1,71 @@
+.hedvig-letters-serif- {
+    font-family: "Hedvig Letters Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom , #800080,#dda0dd);
+    background-repeat: no-repeat;
+
+}
+.container{
+    text-align: center;
+
+    padding: 40px;
+    border-radius: 10px;
+    background-color: bisque;
+    background: #0f0e0f74;
+
+
+}
+h1{
+    margin-bottom: 20px;
+    font-size: 45px;
+}
+h2{
+    font-size: 35px;
+
+
+    right: 10px;
+}
+input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+
+}
+div,a{
+    align-items: center;
+    padding: 1px 0 10px ;
+    text-decoration: none;
+    color: bisque;
+
+}
+button{
+    background-color: #4caf50;
+    color: white;
+    padding: 1% 30%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+
+}
+.notconta{
+    background: #3a133ac0;
+    padding: 1% 27%;
+
+}
+p{
+    padding: 0%;
+}

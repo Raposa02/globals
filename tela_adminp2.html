@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Cliente</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="header">
+    <nav class="menu">
+        <a href="tela_adminp2.html">Início</a>
+        <a href="html/metodo-autenticacao.html">Autenticação</a>
+        <a href="html/perfil.html">Perfil</a>
+        <a href="html/tela-admin.html">criar novo arquivo</a>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="documentos-pendentes">
+        <h2 class="center">Documentos Pendentes</h2>
+        <div id="carrosselDocumentos" class="carrossel">
+
+        </div>
+        <div class="assinar"> <button class="btn-assinar" id="assinar" onclick="window.location.href='metodo-autenticacao.html'">Autenticar e Assinar Todos</button></div>
+
+    </section>
+
+    <section class="historico">
+        <h3 class="center">Histórico de Assinaturas</h3>
+        <div id="historicoDocumentos" class="documentos"></div>
+    </section>
+
+    <section class="upload">
+        <h3 class="center">Enviar Documento para Assinatura</h3>
+        <input type="file" accept="image/*,.pdf">
+        <button>Enviar Documento</button>
+    </section>
+
+    <div class="chat" onclick="abrirChat()">Chat de Suporte</div>
+    <div class="chat-box" id="chatBox">
+        <p>Chat com IA - Fale conosco</p>
+        <textarea></textarea><br>
+        <button onclick="enviarMensagem()">Enviar</button>
+    </div>
+</main>
+
+<footer class="rodape rodape-preto">
+    <div class="container-rodape">
+        <img src="logo-fiap-branco.png" alt="Logo FIAP" class="logo-rodape">
+        <p>&copy; 2025 LetsSing. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script src="../javascript/login-corporativo.js"></script>
+<script src="../javascript/cliente.js"></script>
+<script src="../javascript/dif.js"></script>
+</body>
+</html>

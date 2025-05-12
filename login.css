@@ -1,0 +1,139 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #800080, #4b0082, #000);
+    background-size: 300% 300%;
+    animation: bgAnimation 10s ease infinite;
+    color: #fff;
+    padding: 20px;
+}
+
+@keyframes bgAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    max-width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background-color: #111827;
+    transition: all 0.6s ease;
+}
+
+.info-box, .form-box {
+    width: 50%;
+    padding: 60px 40px;
+    transition: all 0.5s ease;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #1f2937;
+}
+
+.info-box img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.form-box {
+    position: relative;
+    overflow: hidden;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+}
+
+form.show {
+    opacity: 1;
+    transform: translateX(0%);
+    position: relative;
+}
+
+form.hide {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+form h2 {
+    margin-bottom: 30px;
+}
+
+input {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #374151;
+    color: white;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    background: #10b981;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #059669;
+}
+
+.form-footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-footer a {
+    color: #10b981;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .info-box, .form-box {
+        width: 100%;
+        padding: 40px 20px;
+    }
+    form {
+        position: relative;
+        transform: none !important;
+    }
+}

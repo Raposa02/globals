@@ -1,0 +1,102 @@
+body {
+
+
+
+    margin: 0;
+
+    justify-content: center;
+
+    height: 100vh;
+    background: linear-gradient(to bottom , #800080,#dda0dd);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.asina_todos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header {
+    background-color: #cbd5f7;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+}
+main {
+    padding: 20px;
+
+
+}
+.slide-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+}
+.documento {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    min-width: 250px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+.assinado { color: green; }
+.pendente { color: yellow; }
+.vencido { color: red; }
+button, input[type="checkbox"] {
+    margin-top: 10px;
+}
+.chat {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background: #e0f0ff;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+}
+.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    left: 10px;
+    background: white;
+    color: black;
+    padding: 10px;
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+}
+.chat-box textarea {
+    width: 100%;
+    height: 100px;
+}
+.card {
+    /* Add shadows to create the "card" effect */
+
+
+    width: 30%;
+    padding: 20px;
+    align-items: center;
+    display: inline-block;
+    justify-items: center;
+
+    margin: 15px;
+}
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.b{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.doc{
+
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticação por Voz</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/voz.css">
+</head>
+<body>
+<div class="box">
+    <h2>Autenticação por Voz</h2>
+    <p id="instrucao">Diga em voz alta: <strong>"Autorizo a assinatura digital"</strong></p>
+    <button onclick="iniciarReconhecimentoVoz()">Iniciar Reconhecimento de Voz</button>
+    <p class="status" id="statusMensagem"></p>
+</div>
+
+<script>
+    function iniciarReconhecimentoVoz() {
+        const status = document.getElementById("statusMensagem");
+        status.textContent = "Escutando...";
+        status.className = "";
+
+        const reconhecimento = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+        reconhecimento.lang = "pt-BR";
+        reconhecimento.start();
+
+        reconhecimento.onresult = function(event) {
+            const texto = event.results[0][0].transcript.toLowerCase();
+            if (texto.includes("autorizo a assinatura digital")) {
+                status.textContent = "Frase reconhecida! Autenticando...";
+                status.className = "status success";
+                fetch("http://localhost:8080/autenticar/voz", { method: "POST" })
+                    .then(() => status.textContent = "Autenticado com sucesso!")
+                    .catch(() => {
+                        status.textContent = "Erro na autenticação.";
+                        status.className = "status error";
+                    });
+            } else {
+                status.textContent = "Frase incorreta. Tente novamente.";
+                status.className = "status error";
+            }
+        };
+
+        reconhecimento.onerror = function() {
+            status.textContent = "Erro ao acessar o microfone.";
+            status.className = "status error";
+        };
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Assinatura Manual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+    <h1>Assinatura Manual</h1>
+    <p>Assine com o mouse ou digite sua assinatura estilizada</p>
+
+    <canvas id="canvas"></canvas>
+
+    <button class="btn" onclick="limparCanvas()">Limpar</button>
+    <button class="btn" onclick="enviarAssinatura()">Enviar</button>
+    <button class="btn" onclick="alternarModo()">Alternar para Digitar</button>
+
+    <div class="modo-digitado" id="modoDigitado">
+        <input type="text" id="assinaturaInput" placeholder="Digite seu nome aqui..." oninput="mostrarPreview()">
+        <div class="preview-assinatura" id="previewAssinatura"></div>
+    </div>
+</div>
+<script src="../javascript/autenticaco-assinatura.js"></script>
+
+</body>
+</html>

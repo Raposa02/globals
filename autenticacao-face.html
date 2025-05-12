@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Reconhecimento Facial</title>
+    <link rel="stylesheet" href="../css/face.css" />
+
+</head>
+<body>
+
+<div class="face-container">
+    <video id="camera" autoplay playsinline></video>
+    <div class="recorte-oval"></div>
+</div>
+
+<div class="javis-msg">
+    Olá! Posicione seu rosto dentro do oval e aproxime lentamente para autenticar.
+</div>
+
+<button onclick="simularReconhecimento()">Simular Reconhecimento</button>
+<button onclick="volta()">voltar</button>
+<script src="../javascript/face.js"></script>
+
+</body>
+</html>

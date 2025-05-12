@@ -1,0 +1,320 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #800080, #4b0082);
+    color: #fff;
+}
+
+.header {
+    background-color: #1a1a1a;
+    padding: 15px;
+    text-align: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover,
+.menu .ativo {
+    color: #10b981;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.center {
+    text-align: center;
+}
+
+h2, h3 {
+    margin-bottom: 20px;
+}
+
+.carrossel, .documentos {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.upload, .assinar, .chat {
+    margin-top: 30px;
+    text-align: center;
+}
+
+input[type="file"] {
+    padding: 12px;
+    background: #fff;
+    border-radius: 8px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #10b981;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #059669;
+}
+
+.chat {
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.chat:hover {
+    background-color: #333;
+}
+
+.chat-box {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+.header {
+    background-color: #1a1a1a;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover,
+.menu .ativo {
+    color: #10b981;
+}
+
+.notificacoes-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.notificacoes-sidebar {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    background-color: #222;
+    transition: right 0.3s ease;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+.notificacoes-sidebar.ativa {
+    right: 0;
+}
+
+.notificacoes-sidebar h3 {
+    color: #10b981;
+    margin-bottom: 15px;
+}
+
+.notificacao {
+    background: #333;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.carrossel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.card-doc {
+    background: #292929;
+    border-radius: 10px;
+    padding: 15px;
+    min-width: 240px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    position: relative;
+    transform-origin: center;
+}
+
+.card-doc:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.card-info {
+   opacity: 0;
+    max-height: 0;
+    transition: opacity 0.3s , max-height 0.3s;
+    margin-top: 10px;
+
+}
+
+.card-doc:hover .card-info {
+   opacity: 1;
+    max-height: 100px;
+}
+
+.card-doc img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.historico {
+    margin-top: 40px;
+}
+
+.estatisticas {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.1em;
+}
+
+.assistente {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #10b981;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.chatbox {
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    width: 300px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 15px;
+    display: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.chatbox textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    resize: none;
+    height: 70px;
+    background-color: #333;
+    color: #fff;
+}
+
+.chatbox button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #10b981;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.chat-box textarea {
+    width: 100%;
+    height: 80px;
+    border-radius: 8px;
+    padding: 10px;
+    border: none;
+    resize: none;
+}
+
+.rodape {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.logo-rodape {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.rodape p {
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+@media (max-width: 600px) {
+    .menu a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 25px;
+    }
+}
+.historico{
+    background: rgba(36, 23, 62, 0.94);
+    border-radius: inherit;
+}

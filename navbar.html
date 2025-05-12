@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Navbar LetsSing</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2a003f;
+            padding: 10px 20px;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.4em;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #caa0ff;
+        }
+
+        .search-box {
+            max-width: 250px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 6px 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .search-dropdown {
+            display: none;
+            position: absolute;
+            background: #fff;
+            border: 1px solid #ccc;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 999;
+        }
+
+        .search-dropdown a {
+            display: block;
+            padding: 8px 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .search-dropdown a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .notification-btn, .menu-toggle {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.4em;
+            cursor: pointer;
+            margin-left: 15px;
+        }
+
+        .notification-badge {
+            position: absolute;
+            top: -5px;
+            right: -8px;
+            background-color: red;
+            color: white;
+            font-size: 0.7em;
+            padding: 2px 6px;
+            border-radius: 50%;
+        }
+
+        .offcanvas {
+            position: fixed;
+            right: -320px;
+            top: 0;
+            width: 300px;
+            height: 100%;
+            background-color: rgba(36, 23, 62, 0.94);
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+            transition: right 0.3s ease-in-out;
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .offcanvas.active {
+            right: 0;
+        }
+
+        .offcanvas-header {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .offcanvas-body {
+            padding: 15px;
+            overflow-y: auto;
+        }
+
+        .list-group {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-group-item {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            background-color: #2a003f;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            width: 240px;
+            transition: left 0.3s ease;
+            z-index: 1500;
+        }
+
+        .mobile-menu.active {
+            left: 0;
+            display: flex;
+        }
+
+        .mobile-menu a {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links, .search-box {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+        .menu-toggle{
+            display: none;
+            font-size:1.8em;
+            background: none;
+            border:none;
+            color: white;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        @media (max-width: 900px) {
+            .nav-links,
+            .search-box{
+                display: none;
+            }
+            .menu-toggle{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+
+    <div style="display:flex ;align-items:center;">
+        <button class="menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        <a href="#" class="navbar-brand">LetsSing</a>
+    </div>
+    <div class="nav-links">
+        <a href="cliente.html">Home</a>
+        <a href="chatebot.html">Javis Chat</a>
+        <a href="metodo-autenticacao.html">Autenticação</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="ajuda.html">Ajuda</a>
+        <a href="feedback.html">Feedback</a>
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Pesquisar..." />
+        <div id="suggestions" class="search-dropdown"></div>
+    </div>
+
+    <button class="notification-btn" onclick="toggleNotificacoes()">
+        🔔
+        <span class="notification-badge">3</span>
+    </button>
+</nav>
+
+
+<div id="mobileMenu" class="mobile-menu">
+    <a href="cliente.html">Home</a>
+    <a href="chatebot.html">Javis Chat</a>
+    <a href="metodo-autenticacao.html">Autenticação</a>
+    <a href="perfil.html">Perfil</a>
+    <a href="ajuda.html">Ajuda</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="#" onclick="toggleMobileMenu()">✖ Fechar</a>
+</div>
+
+<!-- Offcanvas de Notificações -->
+<div id="notificacoesOffcanvas" class="offcanvas">
+    <div class="offcanvas-header">
+        <h4>Notificações</h4>
+        <button onclick="toggleNotificacoes()">✖️</button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="list-group">
+            <li class="list-group-item">Novo documento disponível para assinatura.</li>
+            <li class="list-group-item">Atualização de segurança implementada.</li>
+            <li class="list-group-item">Chat com Javis foi melhorado!</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+
+    const searchInput = document.getElementById('searchInput');
+    const suggestions = document.getElementById('suggestions');
+    const items = [
+        { name: 'Home', link: 'cliente.html' },
+        { name: 'Javis Chat', link: 'chat.html' },
+        { name: 'Perfil', link: 'perfil.html' },
+        { name: 'Autenticação', link: 'metodo-autenticacao.html' },
+        { name: 'Ajuda', link: 'ajuda.html' },
+        { name: 'Feedback', link: 'feedback.html' }
+    ];
+
+    searchInput.addEventListener('input', () => {
+        const value = searchInput.value.toLowerCase();
+        suggestions.innerHTML = '';
+        if (value) {
+            const filtered = items.filter(i => i.name.toLowerCase().includes(value));
+            filtered.forEach(item => {
+                const a = document.createElement('a');
+                a.href = item.link;
+                a.textContent = item.name;
+                suggestions.appendChild(a);
+            });
+            suggestions.style.display = 'block';
+        } else {
+            suggestions.style.display = 'none';
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!searchInput.contains(e.target)) {
+            suggestions.style.display = 'none';
+        }
+    });
+
+    function toggleNotificacoes() {
+        document.getElementById('notificacoesOffcanvas').classList.toggle('active');
+    }
+
+    function toggleMobileMenu() {
+        document.getElementById('mobileMenu').classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    display: flex;
+    min-height: 100vh;
+}
+
+.menu-lateral {
+    width: 260px;
+    background-color: #1f2937;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.menu-lateral .perfil {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu-lateral .perfil .avatar {
+    width: 80px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.menu-lateral nav a {
+    display: block;
+    color: #ccc;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.menu-lateral nav a.ativo,
+.menu-lateral nav a:hover {
+    background-color: #374151;
+    color: #fff;
+}
+
+.menu-lateral .explicacoes {
+    margin-top: auto;
+    font-size: 0.85em;
+}
+
+.conteudo {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.tela {
+    display: none;
+}
+
+.tela.ativa {
+    display: block;
+}
+
+.chat {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mensagem {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.mensagem.robo {
+    background-color: #e0f2fe;
+    align-self: flex-start;
+}
+
+.mensagem.usuario {
+    background-color: #d1fae5;
+    align-self: flex-end;
+    text-align: right;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .menu-lateral {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+    .menu-lateral nav {
+        display: flex;
+        gap: 10px;
+    }
+    .conteudo {
+        padding: 15px;
+    }
+}

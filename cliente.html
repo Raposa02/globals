@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal do Cliente</title>
+  <link rel="stylesheet" href="../css/oi.css">
+
+</head>
+<body>
+
+<header class="header">
+  <div id="menu"></div>
+</header>
+
+<main class="container">
+  <section class="documentos-pendentes">
+    <h2 class="center">Documentos Pendentes</h2>
+    <div id="carrosselDocumentos" class="carrossel"></div>
+    <div class="assinar">
+      <button id="assinar" onclick="window.location.href='metodo-autenticacao.html'">Autenticar e Assinar Todos</button>
+    </div>
+  </section>
+
+  <section class="historico">
+    <h3 class="center">Histórico de Assinaturas</h3>
+    <div id="historicoDocumentos" class="documentos"></div>
+  </section>
+
+  <section class="upload">
+    <h3 class="center">Enviar Documento para Assinatura</h3>
+    <input type="file" accept="image/*,.pdf">
+    <br>
+    <button>Enviar Documento</button>
+  </section>
+  <div class="assistente" onclick="toggleChatbox()">J</div>
+  <div class="chatbox" id="chatbox">
+    <p><strong>Javis:</strong> Olá! Precisa de ajuda com seus documentos?</p>
+    <textarea placeholder="Digite sua dúvida..."></textarea>
+    <button onclick="enviarPergunta()">Enviar</button>
+  </div>
+  </div>
+</main>
+
+<iframe src="rodape.html" width ="100%" height ="100%px"></iframe>
+
+<script src="../javascript/mundo.js"></script>
+<script src="../javascript/navbar.js"></script>
+<script src="../javascript/cliente.js"></script>
+<script src="../javascript/dif.js"></script>
+</body>
+</html>

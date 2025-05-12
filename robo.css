@@ -1,0 +1,87 @@
+body {
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.javis {
+    position: relative;
+    width: 190px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.corpo {
+    width: 160px;
+    height: 130px;
+    background: white;
+    border-radius: 60px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.face {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 115px;
+    height: 45px;
+    background: #111;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.olho {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.braco {
+    position: absolute;
+    width: 35px;
+    height: 80px;
+    background: #ccc;
+    border-radius: 50%;
+    top: 80px;
+    z-index: 1;
+}
+
+.braco.esquerdo {
+    left: -25px;
+}
+
+.braco.direito {
+    right: -25px;
+}
+
+.sombra {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 15px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* EXPRESSÕES */
+.javis.bravo .olho {
+    transform: rotate(25deg);
+}
+
+.javis.confuso .olho.esquerdo {
+    transform: rotate(-20deg);
+}
+.javis.confuso .olho.direito {
+    transform: rotate(20deg);
+}

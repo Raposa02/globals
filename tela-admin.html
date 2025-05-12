@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Gerenciar Documentos</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="header">
+  <nav class="menu">
+    <a href="metodo-autenticacao.html" class="ativo">Gerenciar Documentos</a>
+    <a href="perfil.html">Perfil</a>
+    <a href="cliente.html"></a>
+    <a href="cliente.html"></a>
+  </nav>
+</header>
+
+<main class="container">
+  <h2>Enviar Novo Documento</h2>
+  <form id="formNovoDoc">
+    <input type="text" id="titulo" placeholder="Título do Documento" required>
+    <textarea id="descricao" placeholder="Descrição" required></textarea>
+    <input type="datetime-local" id="prazo" required>
+    <input type="text" id="local" placeholder="Local da Assinatura" required>
+    <input type="time" id="hora" required>
+    <select id="assinatura" required>
+      <option value="">Escolher método de autenticação</option>
+      <option value="Token">Token (SMS)</option>
+      <option value="Biometria">Biometria</option>
+      <option value="Face">Reconhecimento Facial</option>
+      <option value="Voz">Reconhecimento de Voz</option>
+    </select>
+    <input type="email" id="emailCliente" placeholder="Email do Cliente" required>
+    <button type="submit">Enviar Documento</button>
+  </form>
+
+  <div id="mensagemEnvio"></div>
+</main>
+
+<footer class="rodape rodape-preto">
+  <div class="container-rodape">
+    <img src="logo-fiap-branco.png" alt="Logo FIAP" class="logo-rodape">
+    <p>&copy; 2025 LetsSing. Todos os direitos reservados.</p>
+  </div>
+</footer>
+<script src="dif.js"></script>
+</body>
+</html>

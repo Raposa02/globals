@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Admin - Gerenciar Documentos</title>
+    <link rel="stylesheet" href="../css/admin-style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+</head>
+<body>
+<header class="header">
+    <div id="menu"></div>
+    </nav>
+</header>
+
+<main class="container">
+    <h2>Enviar Novo Documento</h2>
+    <form id="formNovoDoc" class="form-doc">
+        <input type="text" id="titulo" placeholder="Título do Documento" required />
+        <textarea id="descricao" placeholder="Descrição do Documento" required></textarea>
+        <input type="datetime-local" id="prazo" required />
+        <input type="text" id="local" placeholder="Local da Assinatura" required />
+        <input type="time" id="hora" required />
+        <select id="assinatura" required>
+            <option value="">Método de Autenticação</option>
+            <option value="Token">Token (SMS)</option>
+            <option value="Biometria">Biometria</option>
+            <option value="Face">Reconhecimento Facial</option>
+            <option value="Voz">Reconhecimento de Voz</option>
+        </select>
+        <input type="email" id="emailCliente" placeholder="Email do Cliente" required />
+        <input type="file" id="arquivoDoc" accept="application/pdf" required />
+        <button type="submit">Enviar Documento</button>
+    </form>
+
+    <div id="preview" class="preview-card" style="display: none; margin-top: 30px;">
+        <h3>Pré-visualização do Documento</h3>
+        <p><strong>Título:</strong> <input type="text" id="prevTitulo" /></p>
+        <p><strong>Descrição:</strong> <input type="text" id="prevDesc" /></p>
+        <p><strong>Data e Hora:</strong> <input type="text" id="prevDataHora" /></p>
+        <p><strong>Local:</strong> <input type="text" id="prevLocal" /></p>
+        <p><strong>Autenticação:</strong> <input type="text" id="prevMetodo" /></p>
+        <p><strong>Cliente:</strong> <input type="text" id="prevEmail" /></p>
+        <p><strong>Arquivo:</strong> <span id="prevArquivo"></span></p>
+        <canvas id="pdfPreviewCanvas" style="width: 100%; max-width: 500px; margin-top: 20px; border: 1px solid #ccc; border-radius: 8px;"></canvas>
+    </div>
+
+    <section class="carrossel">
+        <h3>Documentos Enviados</h3>
+        <div class="carrossel-container" id="carrosselContainer">
+            <!-- Cards de documentos serão adicionados aqui -->
+        </div>
+    </section>
+</main>
+<script src="../javascript/mundo.js"></script>
+<script src="../javascript/navbar.js"></script>
+<script src="../javascript/tela-criacao-documento.js"></script>
+<iframe src="rodape.html" width ="100%" height ="100%px"></iframe>
+
+
+</body>
+</html>

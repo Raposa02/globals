@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #800080, #4b0082);
+    color: white;
+}
+
+.header {
+    background-color: #1a1a1a;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.menu a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover,
+.menu .ativo {
+    color: #10b981;
+}
+
+.caixa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.container {
+    background-color: #ffffff10;
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+select {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 1em;
+}
+
+input::placeholder {
+    color: #888;
+}
+
+select {
+    background-color: #f4f4f4;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    background-color: #10b981;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #059669;
+}
+
+form p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.95em;
+    color: #ddd;
+}
+
+.rodape {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.rodape .logo-rodape {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.rodape p {
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    input,
+    select,
+    button {
+        font-size: 0.95em;
+    }
+
+    .menu a {
+        display: inline-block;
+        margin: 10px 8px;
+    }
+}
+.lin{
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

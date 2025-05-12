@@ -1,0 +1,239 @@
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+}
+
+.header {
+    background: linear-gradient(to bottom , #010101,#281e60);
+    background-repeat: no-repeat;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a.ativo {
+    text-decoration: underline;
+}
+
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom , #800080,#dda0dd);
+    background-repeat: no-repeat;
+
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+h2, h3 {
+    color: #d5dde6;
+}
+
+.carrossel, .documentos {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.carrossel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carrossel::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.card-documento {
+    background: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 1rem;
+    min-width: 250px;
+    transition: transform 0.3s, background 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+.card-documento p,
+.card-documento .btn-individual {
+    display: none; /* Esconde por padrão */
+    margin-top: 10px;
+}
+.card-documento.pendente {
+    border-color: #ff9800;
+    background: #fff8e1;
+}
+
+.card-documento:hover {
+    transform: translateY(-5px);
+}
+
+.btn-assinar, button {
+    background-color: #3807a0;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.btn-individual {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px auto 0;
+}
+.btn-individual:hover {
+    background-color: #005599;
+}
+.card-documento:hover p,
+.card-documento:hover .btn-individual {
+    display: flex; /* Mostra ao passar o mouse */
+}
+
+.upload input[type="file"] {
+    margin: 1rem 0;
+}
+
+.chat {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #0052cc;
+    color: white;
+    padding: 1rem;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.chat-box {
+    position: fixed;
+    bottom: 4rem;
+    right: 1rem;
+    background: rgb(136, 123, 164);
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 12px;
+    display: none;
+    width: 300px;
+}
+
+.rodape {
+    background-color: #000000;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}
+
+.foto-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.foto-perfil img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #0052cc;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input[type="text"], input[type="email"] {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    .menu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .carrossel, .documentos {
+        flex-direction: column;
+    }
+    .chat-box {
+        width: 90%;
+        right: 5%;
+    }
+}
+.rodape-preto {
+    background-color: #000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+.logo-rodape {
+    height: 40px;
+    margin-bottom: 10px;
+}
+.historico{
+    background: #131417c1;
+
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    border-radius: 12px;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.assinar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1%;
+}
+
+.btn-individual {
+    margin-top: 10px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-individual:hover {
+    background-color: #005599;
+}
